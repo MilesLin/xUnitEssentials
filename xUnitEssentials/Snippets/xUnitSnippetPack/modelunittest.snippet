@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>model</Keyword>
+        <Keyword>unit</Keyword>
+        <Keyword>test</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>modelunittest</Title>
+      <Author>Miles Lin</Author>
+      <Description>model 單元測試</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>modelunittest</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Model</ID>
+          <ToolTip>Model</ToolTip>
+          <Default>Model</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Property</ID>
+          <ToolTip>Property</ToolTip>
+          <Default>Property</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[// Arrange
+            var model = new $Model$()
+            {
+                $end$
+            };
+
+            // Act
+            var validationResults = new List<ValidationResult>();
+            var actual = Validator.TryValidateObject(model, new ValidationContext(model), validationResults, validateAllProperties: true);
+
+            // Assert
+            Assert.False(actual, "Expected validation to fail.");
+            Assert.Equal(nameof(model.$Property$),validationResults[0].MemberNames.ElementAt(0));]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

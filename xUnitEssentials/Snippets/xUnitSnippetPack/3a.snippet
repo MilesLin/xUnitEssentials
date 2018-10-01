@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>arrange</Keyword>
+        <Keyword>act</Keyword>
+        <Keyword>assert</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>3a</Title>
+      <Author>Miles Lin</Author>
+      <Description>3A 框架程式碼</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>aaa</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>200</ID>
+          <ToolTip>200</ToolTip>
+          <Default>200</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TargetClass</ID>
+          <ToolTip>TargetClass</ToolTip>
+          <Default>TargetClass</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TargetMethod</ID>
+          <ToolTip>TargetMethod</ToolTip>
+          <Default>TargetMethod</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[            // Arrange
+            var expected = $200$;
+
+            var sut = new $TargetClass$();
+
+            // Act
+            var actual = sut.$TargetMethod$($end$);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+            //expected.ToExpectedObject().ShouldMatch(actual);]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

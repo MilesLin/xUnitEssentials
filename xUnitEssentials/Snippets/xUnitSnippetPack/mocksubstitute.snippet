@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>mock</Keyword>
+        <Keyword>substitute</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>mocksubstitute</Title>
+      <Author>Miles Lin</Author>
+      <Description>Mock Substitute Sample</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mocksubstitute</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>mockName</ID>
+          <ToolTip>mockName</ToolTip>
+          <Default>mockName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Interface</ID>
+          <ToolTip>Interface</ToolTip>
+          <Default>Interface</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Method</ID>
+          <ToolTip>Method</ToolTip>
+          <Default>Method</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>string</ID>
+          <ToolTip>string</ToolTip>
+          <Default>string</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[            var $mockName$ = Substitute.For<$Interface$>();            
+            $mockName$.Received(1).$Method$(Arg.Any<$string$>());
+            //$mockName$.Received(1).$Method$(Arg.Is<$string$>(x => x.Contains("Something")));$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
